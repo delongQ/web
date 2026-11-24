@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="version" content="1.0.0" />
+  <title>Portfolio</title>
+  <meta name="description" content="个人作品集：项目、影像与经历" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=1.0.0" />
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="header">
+    <a href="#top" class="logo" id="logo"></a>
+    <span class="header__clock mono" id="clock"></span>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="菜单">
+      <span class="mono">MENU</span><i></i>
+    </button>
+  </header>
+  <nav class="menu" id="menu" aria-hidden="true">
+    <ol class="menu__list">
+      <li><a href="#top"><span class="mono">01</span>首页<em class="mono">INDEX</em></a></li>
+      <li><a href="#projects"><span class="mono">02</span>项目<em class="mono">WORK</em></a></li>
+      <li><a href="#videos"><span class="mono">03</span>影像<em class="mono">FILMS</em></a></li>
+      <li><a href="#about"><span class="mono">04</span>关于我<em class="mono">ABOUT</em></a></li>
+      <li><a href="#contact"><span class="mono">05</span>联系<em class="mono">CONTACT</em></a></li>
+    </ol>
+  </nav>
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <div class="hero__top">
+        <p class="mono label" id="heroRole"></p>
+        <p class="mono label">PORTFOLIO <span class="arrow">↗</span></p>
+      </div>
+      <h1 class="hero__title" id="heroTitle"></h1>
+      <div class="hero__bottom">
+        <p class="hero__intro reveal" id="heroIntro"></p>
+        <div class="stats" id="stats"></div>
+      </div>
+      <div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
+    </section>
+    <section class="section wrap" id="projects">
+      <div class="section__head">
+        <p class="mono label reveal">SELECTED WORK <span class="arrow">↗</span></p>
+        <h2 class="reveal">做过的一些东西。</h2>
+        <div class="filters reveal" id="filters"></div>
+      </div>
+      <ol class="projects" id="projectList"></ol>
+    </section>
+    <section class="section section--dark" id="videos">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="mono label reveal">FILMS <span class="arrow">↗</span></p>
+          <h2 class="reveal">镜头里的片段。</h2>
+          <p class="section__desc reveal">一些拍下来的东西，有旅行，也有项目的幕后。</p>
+        </div>
+        <div class="videos" id="videoList"></div>
+      </div>
+    </section>
+    <section class="section wrap" id="about">
+      <div class="section__head">
+        <p class="mono label reveal">MY JOURNEY <span class="arrow">↗</span></p>
+        <h2 class="reveal">一路走来，答案一直在变。</h2>
+        <p class="section__desc reveal">这里不是一份履历，只是几个让我改变方向的时刻。</p>
+      </div>
+      <ol class="journey" id="journey"></ol>
+      <div class="section__head section__head--sub">
+        <p class="mono label reveal">MORE ABOUT ME <span class="arrow">↗</span></p>
+        <h2 class="reveal">关于我的一些小事。</h2>
+      </div>
+      <div class="facts" id="facts"></div>
+    </section>
+    <section class="section section--dark" id="contact">
+      <div class="wrap contact">
+        <div class="section__head">
+          <p class="mono label reveal">GET IN TOUCH <span class="arrow">↗</span></p>
+          <h2 class="reveal">聊聊也可以。</h2>
+          <p class="section__desc reveal">关于某个项目、某段影像，或者你最近在折腾的东西，都欢迎来聊聊。</p>
+        </div>
+        <dl class="contact__list reveal" id="contactList"></dl>
+      </div>
+    </section>
+  </main>
+  <footer class="footer wrap">
+    <div class="footer__top">
+      <div>
+        <p class="footer__logo" id="footerLogo"></p>
+        <p class="footer__tag" id="footerTag"></p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h4 class="mono">导航 / MENU</h4>
+          <a href="#top">首页</a><a href="#projects">项目</a><a href="#videos">影像</a><a href="#about">关于我</a>
+        </div>
+        <div>
+          <h4 class="mono">联系 / CONTACT</h4>
+          <div id="footerContact"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom mono">
+      <span id="copyright"></span>
+      <span id="version"></span>
+      <a href="#top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true">
+      <button class="modal__close mono" data-close aria-label="关闭">CLOSE ✕</button>
+      <div class="modal__content" id="modalContent"></div>
+    </div>
+  </div>
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="mono">VIEW</span></div>
+  <script src="data.js?v=1.0.0"></script>
+  <script src="main.js?v=1.0.0"></script>
+  <script src="interact.js?v=1.0.0"></script>
+</body>
+</html>
